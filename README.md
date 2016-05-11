@@ -6,4 +6,4 @@ For external libraries check: http://unfoldingmaps.org/tutorials/getting-started
 
 - Population change data by country
 
-<img src=http://i.imgur.com/ciBfAuF.png?1>
+<img src=http://i.imgur.com/VhyX93m.png?1>
