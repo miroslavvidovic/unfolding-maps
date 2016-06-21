@@ -10,13 +10,15 @@ For external libraries check: http://unfoldingmaps.org/tutorials/getting-started
     - Population change data by country
     - source: World Bank
 
-- src/airports
-    - Show airports on the map 
-    - source: Open Flight
-
 <img src=http://i.imgur.com/UxbTdIl.png?1>
 
 - src/earthquakes
     - Show earthquake data
     - source: earthquake.usgs.gov 
+
+- src/airports
+    - Show airports on the map 
+    - source: Open Flight
+
+
 
