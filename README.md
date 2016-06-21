@@ -1,8 +1,10 @@
 # unfolding-maps
 
-Playing aroung with the Unfolding library in Java
+Playing around with the Unfolding library in Java
 
 For external libraries check: http://unfoldingmaps.org/tutorials/getting-started-in-eclipse.html
+
+<img src=http://i.imgur.com/VhyX93m.png?1>
 
 - src/population_change
 Population change data by country
@@ -15,3 +17,4 @@ source: Open Flight
 - src/earthquakes
 Show earthquake data
 source: earthquake.usgs.gov 
+
