@@ -25,14 +25,6 @@ public class EarthquakeCityMap extends PApplet {
 
 	private static final long serialVersionUID = 1L;
 
-	// IF YOU ARE WORKING OFFILINE, change the value of this variable to true
-	private static final boolean offline = false;
-
-	/** This is where to find the local tiles, for working without an Internet connection */
-	public static String mbTilesString = "blankLight-1-3.mbtiles";
-
-
-
 	//feed with magnitude 2.5+ Earthquakes
 	private String earthquakesURL = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.atom";
 
@@ -51,30 +43,23 @@ public class EarthquakeCityMap extends PApplet {
 	// A List of country markers
 	private List<Marker> countryMarkers;
 
-	// NEW IN MODULE 5
 	private CommonMarker lastSelected;
 	private CommonMarker lastClicked;
 
 	public void setup() {
-		// (1) Initializing canvas and map tiles
 		size(900, 700, OPENGL);
 		map = new UnfoldingMap(this, 200, 50, 650, 600, new Google.GoogleMapProvider());
 		MapUtils.createDefaultEventDispatcher(this, map);
 
-
-		// (2) Reading in earthquake data and geometric properties
-	    //     STEP 1: load country features and markers
 		List<Feature> countries = GeoJSONReader.loadData(this, countryFile);
 		countryMarkers = MapUtils.createSimpleMarkers(countries);
 
-		//     STEP 2: read in city data
 		List<Feature> cities = GeoJSONReader.loadData(this, cityFile);
 		cityMarkers = new ArrayList<Marker>();
 		for(Feature city : cities) {
 		  cityMarkers.add(new CityMarker(city));
 		}
 
-		//     STEP 3: read in earthquake RSS feed
 	    List<PointFeature> earthquakes = ParseFeed.parseEarthquake(this, earthquakesURL);
 	    quakeMarkers = new ArrayList<Marker>();
 
@@ -92,9 +77,6 @@ public class EarthquakeCityMap extends PApplet {
 	    // could be used for debugging
 	    printQuakes();
 
-	    // (3) Add markers to map
-	    //     NOTE: Country markers are not added to the map.  They are used
-	    //           for their geometric properties
 	    map.addMarkers(quakeMarkers);
 	    map.addMarkers(cityMarkers);
 
