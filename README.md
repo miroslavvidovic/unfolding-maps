@@ -7,14 +7,14 @@ For external libraries check: http://unfoldingmaps.org/tutorials/getting-started
 <img src=http://i.imgur.com/VhyX93m.png?1>
 
 - src/population_change
-Population change data by country
-source: World Bank
+    - Population change data by country
+    - source: World Bank
 
 - src/airports
-Show airports on the map 
-source: Open Flight
+    - Show airports on the map 
+    - source: Open Flight
 
 - src/earthquakes
-Show earthquake data
-source: earthquake.usgs.gov 
+    - Show earthquake data
+    - source: earthquake.usgs.gov 
 
