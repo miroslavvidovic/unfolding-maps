@@ -14,6 +14,8 @@ For external libraries check: http://unfoldingmaps.org/tutorials/getting-started
     - Show airports on the map 
     - source: Open Flight
 
+<img src=http://i.imgur.com/UxbTdIl.png?1>
+
 - src/earthquakes
     - Show earthquake data
     - source: earthquake.usgs.gov 
